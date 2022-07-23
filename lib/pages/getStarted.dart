@@ -18,8 +18,9 @@ class _GetStartedState extends State<GetStarted> {
   @override
   void initState() {
     super.initState();
-    _image = Image.asset("assets/Max.jpg");
+    _image = Image.asset("assets/Will.jpg");
   }
+
 
    @override
   void didChangeDependencies() {
@@ -40,22 +41,57 @@ class _GetStartedState extends State<GetStarted> {
               child: _image
           )
       ),
-
-        floatingActionButton: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0,80, 0),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              shape:const StadiumBorder(),
-              elevation: 14.0,
-              primary: const Color.fromRGBO(226, 18, 33, 1.0),
+        floatingActionButton:Column(
+          children: const <Widget> [
+             Padding(
+              padding:  EdgeInsets.fromLTRB(5, 435,5, 0),
+              child: Text(
+                'Welcome to Marvelous',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Urbanist',
+                  fontWeight: FontWeight.bold,
+                  letterSpacing:0.0,
+                  fontSize: 26.0,
+                ),
+              )
             ),
-            onPressed: () {},
-            child: const Text(
-              'Get Started',
-              style: TextStyle(fontSize: 14),
+
+             Padding(
+               padding: EdgeInsets.fromLTRB(60, 30,60, 0),
+               child: Text(
+                    'The No.1 movie streaming app in africa, to brighten your day',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Urbanist',
+                    wordSpacing: 3.0,
+                    fontSize: 14.0,
+               ),
+               ),
+             ),
+    ],
+        ),
+
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.fromLTRB(100, 0,100, 0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape:const StadiumBorder(),
+                elevation: 14.0,
+                primary: const Color.fromRGBO(226, 18, 33, 1.0),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/signup');
+              },
+              child: const Text(
+                'Get Started',
+                style: TextStyle(fontSize: 14),
+              ),
             ),
           ),
-        ),
+
     );
   }
 }
