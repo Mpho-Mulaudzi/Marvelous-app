@@ -12,16 +12,27 @@ class _SignupState extends State<Signup> {
   Widget build(BuildContext context) {
     return Scaffold(
          body: Center(
-           child: Column(
-             children: const <Widget>[
-                 Text(
-                   'Create an account',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 12.0,
-                    ),
-                 )
-             ],
+           child: Padding(
+             padding: const EdgeInsets.all(40.0),
+             child: Column(
+               children:<Widget>[
+                  Image.asset('assets/cat.gif',
+                      height: 200,
+                      width: 300,
+                  ),
+                  const Text(
+                        "Let's you in...",
+                         style: TextStyle(
+                           color: Colors.deepPurple,
+                           fontFamily: 'Urbanist',
+                           fontSize: 30,
+                           fontWeight: FontWeight.bold,
+                           letterSpacing: 2.0
+                         ),
+                  )
+
+               ],
+             ),
            ),
          )
     );
