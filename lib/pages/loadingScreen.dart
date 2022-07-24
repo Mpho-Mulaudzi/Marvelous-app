@@ -23,7 +23,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return  Scaffold(
       backgroundColor: Colors.white,
       body: SplashScreen(
-          seconds: 8,
+          seconds: 20,
           navigateAfterSeconds:GetStarted(),
             image: Image.asset('assets/logo.png'),
             photoSize: 65.0,
@@ -31,8 +31,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
             useLoader: false,
       ),
       floatingActionButton: const Padding(
-        padding: EdgeInsets.fromLTRB(25, 250,0, 0),
-        child: SpinKitSpinningLines(color: Colors.red,size:50),
+        padding: EdgeInsets.fromLTRB(25, 150,0, 0),
+        child: SpinKitSpinningLines(color: Colors.deepPurple,size:50),
       ),
       );
 

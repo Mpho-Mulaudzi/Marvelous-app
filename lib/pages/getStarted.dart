@@ -13,18 +13,18 @@ class GetStarted extends StatefulWidget {
 
 class _GetStartedState extends State<GetStarted> {
   //a variable that will be initialized later
-  late Image _stimage;
+  late Image _image;
 
   @override
   void initState() {
     super.initState();
-    _stimage = Image.asset("assets/Will.jpg");
+    _image = Image.asset('assets/eleven.jpg');
   }
 
   @override
   void didChangeDependencies() {
     //precache image assets for faster loading images
-    precacheImage(_stimage.image, context);
+    precacheImage(_image.image, context);
     super.didChangeDependencies();
   }
 
@@ -35,7 +35,7 @@ class _GetStartedState extends State<GetStarted> {
       body: SizedBox(
           height: double.infinity,
           width: double.infinity,
-          child: FittedBox(fit: BoxFit.cover, child: _stimage)),
+          child: FittedBox(fit: BoxFit.cover, child: _image)),
       floatingActionButton: Column(
         children: const <Widget>[
           Padding(
@@ -73,14 +73,15 @@ class _GetStartedState extends State<GetStarted> {
           style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),
             elevation: 14.0,
-            primary: const Color.fromRGBO(226, 18, 33, 1.0),
+            primary:  Colors.deepPurpleAccent
           ),
           onPressed: () {
             Navigator.pushNamed(context, '/signup');
           },
           child: const Text(
             'Get Started',
-            style: TextStyle(fontSize: 14),
+            style: TextStyle(fontSize: 14,
+            color: Colors.white),
           ),
         ),
       ),
