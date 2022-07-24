@@ -22,16 +22,21 @@ class _LoadingScreenState extends State<LoadingScreen> {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Colors.white,
-      body: SplashScreen(
-          seconds: 20,
-          navigateAfterSeconds:GetStarted(),
-            image: Image.asset('assets/logo.png'),
-            photoSize: 65.0,
-            loaderColor: Colors.red,
-            useLoader: false,
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
+        child: Center(
+          child: SplashScreen(
+              seconds: 20,
+              navigateAfterSeconds:GetStarted(),
+                image: Image.asset('assets/logo.png'),
+                photoSize: 75.0,
+                loaderColor: Colors.red,
+                useLoader: false,
+          ),
+        ),
       ),
       floatingActionButton: const Padding(
-        padding: EdgeInsets.fromLTRB(25, 150,0, 0),
+        padding: EdgeInsets.fromLTRB(25, 400,0, 20),
         child: SpinKitSpinningLines(color: Colors.deepPurple,size:50),
       ),
       );
