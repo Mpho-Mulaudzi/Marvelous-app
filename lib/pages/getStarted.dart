@@ -18,7 +18,8 @@ class _GetStartedState extends State<GetStarted> {
   @override
   void initState() {
     super.initState();
-    _image = Image.asset('assets/eleven.jpg');
+    _image = Image.asset('assets/Lucas.jpg',
+    );
   }
 
   @override
@@ -68,12 +69,12 @@ class _GetStartedState extends State<GetStarted> {
       ),
 
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(100, 0, 100, 0),
+        padding: const EdgeInsets.fromLTRB(60, 0, 60, 0),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),
             elevation: 14.0,
-            primary:  Colors.deepPurpleAccent
+            primary: const Color.fromRGBO(226,18 , 33, 1.0)
           ),
           onPressed: () {
             Navigator.pushNamed(context, '/signup');
@@ -81,10 +82,11 @@ class _GetStartedState extends State<GetStarted> {
           child: const Text(
             'Get Started',
             style: TextStyle(fontSize: 14,
-            color: Colors.white),
+            color:  Colors.white),
           ),
         ),
       ),
+
     );
   }
 }
