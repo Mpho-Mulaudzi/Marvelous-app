@@ -13,9 +13,10 @@ class _SignupState extends State<Signup> {
     return Scaffold(
          body: Center(
            child: Padding(
-             padding: const EdgeInsets.all(10.0),
+             padding: const EdgeInsets.all(8.0),
              child: Column(
                mainAxisAlignment: MainAxisAlignment.start,
+               crossAxisAlignment: CrossAxisAlignment.center,
                children:<Widget>[
                   Image.asset('assets/cat.gif',
                       height: 180,
@@ -73,12 +74,13 @@ class _SignupState extends State<Signup> {
                         style: ElevatedButton.styleFrom(
                             shape: const StadiumBorder(),
                             elevation: 14.0,
-                            primary:  Colors.deepPurpleAccent
+                            primary: const Color.fromRGBO(226,18 , 33, 1.0)
                         ),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/signup');
+                          Navigator.pushNamed(context, '/');
                         },
                         child: const Text(
+
                           'Sign in with password',
                           style: TextStyle(fontSize: 14,
                               color: Colors.white),
@@ -88,16 +90,23 @@ class _SignupState extends State<Signup> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.fromLTRB(60, 0, 60, 20),
         child: Row(
-          children: [
-            Text(
+          children:  [
+            const Text(
                 "Don't have an account?"
             ),
-            Text(
-              "Signup",
-              style: TextStyle(
-                  color:Colors.deepPurple
-              ),
+            InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/create');
+                    },
 
+
+              child: const Text(
+                "Signup",
+                style: TextStyle(
+                    color:Color.fromRGBO(226,18 , 33, 1.0)
+                ),
+
+              ),
             ),
           ],
         ),

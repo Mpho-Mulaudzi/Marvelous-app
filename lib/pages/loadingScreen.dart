@@ -4,20 +4,11 @@ import 'package:splashscreen/splashscreen.dart';
 import 'package:marvelous/pages/getStarted.dart';
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key? key}) : super(key: key);
-
   //const LoadingScreen({Key? key}) : super(key: key);
-
   @override
   State<LoadingScreen> createState() => _LoadingScreenState();
 }
-
-
-
-
 class _LoadingScreenState extends State<LoadingScreen> {
-
-
-
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -37,7 +28,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       ),
       floatingActionButton: const Padding(
         padding: EdgeInsets.fromLTRB(25, 400,0, 20),
-        child: SpinKitSpinningLines(color: Colors.deepPurple,size:50),
+        child: SpinKitSpinningLines(color: Color.fromRGBO(226,18 , 33, 1.0),size:50),
       ),
       );
 
