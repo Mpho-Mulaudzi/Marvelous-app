@@ -76,6 +76,9 @@ flutter:
    - assets/create.gif
    - assets/pc.jpg
    - assets/fire.jpg
+   - assets/icon/Apple.png
+   - assets/icon/facebook.png
+   - assets/icon/google.png
 
 
 
