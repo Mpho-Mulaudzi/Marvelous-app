@@ -18,7 +18,7 @@ class _GetStartedState extends State<GetStarted> {
   @override
   void initState() {
     super.initState();
-    _image = Image.asset('assets/Lucas.jpg',
+    _image = Image.asset('assets/Demogorgon.jpg'
     );
   }
 
