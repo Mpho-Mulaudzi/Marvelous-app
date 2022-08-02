@@ -48,7 +48,7 @@ class _createAccountpageState extends State<createAccountpage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     TextFormField(
-                      style : TextStyle( fontSize: 15,color: Colors.black),
+                      style : const TextStyle( fontSize: 15,color: Colors.black),
                       decoration: const InputDecoration(hintText: 'Email',
                       prefixIcon: Icon(Icons.email,size: 20,color:Colors.black)),
                       validator: (String? value) {
@@ -58,15 +58,15 @@ class _createAccountpageState extends State<createAccountpage> {
                         return null;
                       },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 3,
                     ),
                     TextFormField(
                       obscureText: _isObscure,
-                      style : TextStyle( fontSize: 15 , color: Colors.black),
+                      style : const TextStyle( fontSize: 15 , color: Colors.black),
                       decoration: InputDecoration(
                           hintText: 'Password',
-                          prefixIcon: Icon(Icons.lock, size:20,color:Colors.black),
+                          prefixIcon: const Icon(Icons.lock, size:20,color:Colors.black),
                           suffixIcon: IconButton(
                               icon: Icon(_isObscure
                                   ? Icons.visibility
@@ -83,7 +83,7 @@ class _createAccountpageState extends State<createAccountpage> {
                         return null;
                       },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Padding(
@@ -102,14 +102,14 @@ class _createAccountpageState extends State<createAccountpage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Center(
-                      child: const Text('Or continue with',
+                    const Center(
+                      child: Text('Or continue with',
                           style: TextStyle(fontSize: 16, color: Colors.blueGrey)),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -156,7 +156,7 @@ class _createAccountpageState extends State<createAccountpage> {
               const Text("Already have an account?"),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, '/create');
+                  Navigator.pushNamed(context, '/login');
                 },
                 child: const Text(
                   "Signin",
