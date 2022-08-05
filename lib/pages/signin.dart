@@ -48,11 +48,14 @@ class _signinPageState extends State<signinPage> {
                     children: <Widget>[
                       TextFormField(
                         style:
-                            const TextStyle(fontSize: 15, color: Colors.black),
-                        decoration: const InputDecoration(
+                            const TextStyle(fontSize: 15, ),
+                            decoration: const InputDecoration(
+                           //align hint text and icons
+                              contentPadding: EdgeInsets.symmetric(vertical: 15),
+                            border: InputBorder.none,
                             hintText: 'Email',
                             prefixIcon: Icon(Icons.email,
-                                size: 20, color: Colors.black)),
+                                size: 20,)),
                         validator: (String? value) {
                           if (value == null || value.isEmpty) {
                             return 'Please enter email';
@@ -68,9 +71,12 @@ class _signinPageState extends State<signinPage> {
                         style:
                             const TextStyle(fontSize: 15, color: Colors.black),
                         decoration: InputDecoration(
+                          border: InputBorder.none,
+                            contentPadding: EdgeInsets.symmetric(vertical: 15),
+
                             hintText: 'Password',
                             prefixIcon: const Icon(Icons.lock,
-                                size: 20, color: Colors.black),
+                                size: 20,),
                             suffixIcon: IconButton(
                                 icon: Icon(_isObscure
                                     ? Icons.visibility
@@ -95,7 +101,7 @@ class _signinPageState extends State<signinPage> {
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               shape: const StadiumBorder(),
-                              elevation: 14.0,
+                              elevation: 0.0,
                               primary: const Color.fromRGBO(226, 18, 33, 1.0)),
                           onPressed: () {
                             Navigator.pushNamed(context, '/interests');
@@ -157,13 +163,13 @@ class _signinPageState extends State<signinPage> {
           padding: const EdgeInsets.fromLTRB(60, 0, 60, 10),
           child: Row(
             children: [
-              const Text("Don't have an account?"),
+              const Text("Don't have an account? "),
               InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, '/create');
                 },
                 child: const Text(
-                  "Signup",
+                  "Sign up",
                   style: TextStyle(color: Color.fromRGBO(226, 18, 33, 1.0)),
                 ),
               ),

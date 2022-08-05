@@ -19,10 +19,16 @@ class _SignupState extends State<Signup> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
-                'assets/cat.gif',
-                height: 180,
-                width: 280,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: const Image(
+                  height: 200,
+                  width:200,
+                  image: AssetImage(
+                  'assets/letsyouin.jpg',
+
+                ),
+              ),
               ),
               const Text(
                 "Let's you in...",
@@ -37,10 +43,10 @@ class _SignupState extends State<Signup> {
                 height: 15,
               ),
               SignInButton(
-                Buttons.FacebookNew,
+                Buttons.FacebookNew ,
                 text: "Continue with facebook",
                 onPressed: () {},
-                mini: false,
+                elevation: 0.0,
               ),
               const SizedBox(
                 height: 3,
@@ -49,7 +55,8 @@ class _SignupState extends State<Signup> {
                 Buttons.Google,
                 text: "Continue with Google",
                 onPressed: () {},
-                mini: false,
+                elevation: 0.0,
+
               ),
               const SizedBox(
                 height: 3,
@@ -58,7 +65,8 @@ class _SignupState extends State<Signup> {
                 Buttons.Apple,
                 text: "Continue with Apple",
                 onPressed: () {},
-                mini: false,
+                elevation: 0.0,
+
               ),
               const Text('Or',
                   style: TextStyle(fontSize: 16, color: Colors.blueGrey)),
@@ -71,7 +79,7 @@ class _SignupState extends State<Signup> {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               shape: const StadiumBorder(),
-              elevation: 14.0,
+              elevation: 0.0,
               primary: const Color.fromRGBO(226, 18, 33, 1.0)),
           onPressed: () {
             Navigator.pushNamed(context, '/');
@@ -86,13 +94,13 @@ class _SignupState extends State<Signup> {
         padding: const EdgeInsets.fromLTRB(60, 0, 60, 20),
         child: Row(
           children: [
-            const Text("Don't have an account?"),
+            const Text("Don't have an account? "),
             InkWell(
               onTap: () {
                 Navigator.pushNamed(context, '/create');
               },
               child: const Text(
-                "Signup",
+                "Sign up",
                 style: TextStyle(color: Color.fromRGBO(226, 18, 33, 1.0)),
               ),
             ),
