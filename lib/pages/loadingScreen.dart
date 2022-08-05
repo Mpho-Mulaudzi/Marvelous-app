@@ -17,7 +17,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
         padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
         child: Center(
           child: SplashScreen(
-              seconds: 10,
+              seconds: 5,
               navigateAfterSeconds:GetStarted(),
                 image: Image.asset('assets/logo.png'),
                 photoSize: 75.0,

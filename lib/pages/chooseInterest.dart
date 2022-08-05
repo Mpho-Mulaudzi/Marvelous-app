@@ -58,19 +58,20 @@ class _chooseInterestpageState extends State<chooseInterestpage> {
       body: Wrap(
         alignment: WrapAlignment.spaceEvenly,
         direction: Axis.horizontal,
-        runSpacing: 10.0,
+
+        spacing: 15.0,
         children: genres.map((genre) {
           return ElevatedButton(
             style: ElevatedButton.styleFrom(
                 shape: const StadiumBorder(),
-                elevation: 14.0,
+                elevation: 0.0,
                 primary: const Color.fromRGBO(226, 18, 33, 1.0)),
             onPressed: () {
               Navigator.pushNamed(context, '/interests');
             },
             child: Text(
               genre,
-              style: TextStyle(fontSize: 12, color: Colors.white),
+              style: const TextStyle(fontSize: 12, color: Colors.white),
             ),
           );
         }).toList(),
@@ -87,7 +88,7 @@ class _chooseInterestpageState extends State<chooseInterestpage> {
                     elevation: 0.0,
                     primary: const Color.fromRGBO(255, 200, 200, 1.0)),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/interests');
+                  Navigator.pushNamed(context, '/profile');
                 },
                 child: const Text(
                   'Skip',
@@ -96,15 +97,15 @@ class _chooseInterestpageState extends State<chooseInterestpage> {
                 ),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     shape: const StadiumBorder(),
-                    elevation: 14.0,
+                    elevation: 0.0,
                     primary: const Color.fromRGBO(226, 18, 33, 1.0)),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/interests');
+                  Navigator.pushNamed(context, '/profile');
                 },
                 child: const Text(
                   'Continue',

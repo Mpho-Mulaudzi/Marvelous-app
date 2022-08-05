@@ -48,9 +48,12 @@ class _createAccountpageState extends State<createAccountpage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     TextFormField(
-                      style : const TextStyle( fontSize: 15,color: Colors.black),
-                      decoration: const InputDecoration(hintText: 'Email',
-                      prefixIcon: Icon(Icons.email,size: 20,color:Colors.black)),
+                      style : const TextStyle( fontSize: 15),
+                      decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.symmetric(vertical: 15),
+                          hintText: 'Email',
+                      prefixIcon: Icon(Icons.email,size: 20)),
                       validator: (String? value) {
                         if (value == null || value.isEmpty) {
                           return 'Please enter email';
@@ -63,10 +66,12 @@ class _createAccountpageState extends State<createAccountpage> {
                     ),
                     TextFormField(
                       obscureText: _isObscure,
-                      style : const TextStyle( fontSize: 15 , color: Colors.black),
+                      style : const TextStyle( fontSize: 15 ),
                       decoration: InputDecoration(
                           hintText: 'Password',
-                          prefixIcon: const Icon(Icons.lock, size:20,color:Colors.black),
+                          border: InputBorder.none,
+                          contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                          prefixIcon: const Icon(Icons.lock, size:20),
                           suffixIcon: IconButton(
                               icon: Icon(_isObscure
                                   ? Icons.visibility
@@ -91,7 +96,7 @@ class _createAccountpageState extends State<createAccountpage> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             shape: const StadiumBorder(),
-                            elevation: 14.0,
+                            elevation: 0.0,
                             primary: const Color.fromRGBO(226, 18, 33, 1.0)),
                         onPressed: () {
                           Navigator.pushNamed(context, '/login');
@@ -166,6 +171,8 @@ class _createAccountpageState extends State<createAccountpage> {
             ],
           ),
         )
+
+
     );
   }
 }
