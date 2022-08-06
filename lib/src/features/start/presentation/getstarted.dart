@@ -69,15 +69,15 @@ class _GetStartedState extends State<GetStarted> {
       ),
 
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(60, 0, 60, 0),
+        padding: const EdgeInsets.fromLTRB(25, 0, 25,5),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),
-            elevation: 14.0,
+            elevation: 20.0,
             primary: const Color.fromRGBO(226,18 , 33, 1.0)
           ),
           onPressed: () {
-            Navigator.pushNamed(context, '/signup');
+            Navigator.pushNamed(context, '/continue');
           },
           child: const Text(
             'Get Started',

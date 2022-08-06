@@ -1,20 +1,20 @@
 import "package:flutter/material.dart";
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({Key? key}) : super(key: key);
+class LetsYouIn extends StatefulWidget {
+  const LetsYouIn({Key? key}) : super(key: key);
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<LetsYouIn> createState() => _LetsYouInState();
 }
 
-class _SignupState extends State<Signup> {
+class _LetsYouInState extends State<LetsYouIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.fromLTRB(5, 10, 5, 10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -75,7 +75,7 @@ class _SignupState extends State<Signup> {
         ),
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.fromLTRB(60, 0, 60, 25),
+        padding: const EdgeInsets.fromLTRB(60, 8, 60, 8),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               shape: const StadiumBorder(),
@@ -97,7 +97,7 @@ class _SignupState extends State<Signup> {
             const Text("Don't have an account? "),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/create');
+                Navigator.pushNamed(context, '/signup');
               },
               child: const Text(
                 "Sign up",

@@ -1,0 +1,20 @@
+List<String> genres = [
+  'Action',
+  'Drama',
+  'Comedy',
+  'Romance',
+  'Science',
+  'Music',
+  'Documentary',
+  'Crime',
+  'fantasy'
+      'Mystery',
+  'Fiction',
+  'Animation',
+  'War',
+  'History',
+  'Television',
+  'Anime',
+  'Sports',
+  'K-drama'
+];

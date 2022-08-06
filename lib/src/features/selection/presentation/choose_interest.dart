@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvelous/src/features/selection/data/data.dart';
 
 class chooseInterestpage extends StatefulWidget {
   const chooseInterestpage({Key? key}) : super(key: key);
@@ -8,27 +9,6 @@ class chooseInterestpage extends StatefulWidget {
 }
 
 class _chooseInterestpageState extends State<chooseInterestpage> {
-  List<String> genres = [
-    'Action',
-    'Drama',
-    'Comedy',
-    'Romance',
-    'Science',
-    'Music',
-    'Documentary',
-    'Crime',
-    'fantasy'
-        'Mystery',
-    'Fiction',
-    'Animation',
-    'War',
-    'History',
-    'Television',
-    'Anime',
-    'Sports',
-    'K-drama'
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +38,6 @@ class _chooseInterestpageState extends State<chooseInterestpage> {
       body: Wrap(
         alignment: WrapAlignment.spaceEvenly,
         direction: Axis.horizontal,
-
         spacing: 15.0,
         children: genres.map((genre) {
           return ElevatedButton(
