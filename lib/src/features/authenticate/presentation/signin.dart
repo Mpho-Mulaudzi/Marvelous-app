@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class signinPage extends StatefulWidget {
-  const signinPage({Key? key}) : super(key: key);
+class SignIn extends StatefulWidget {
+  const SignIn({Key? key}) : super(key: key);
 
   @override
-  State<signinPage> createState() => _signinPageState();
+  State<SignIn> createState() => _signinPageState();
 }
 
-class _signinPageState extends State<signinPage> {
+class _signinPageState extends State<SignIn> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool _isObscure = true;
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:splashscreen/splashscreen.dart';
-import 'package:marvelous/pages/getStarted.dart';
+import 'package:marvelous/src/features/start/presentation/getstarted.dart';
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key? key}) : super(key: key);
   //const LoadingScreen({Key? key}) : super(key: key);

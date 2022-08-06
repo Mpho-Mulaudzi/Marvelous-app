@@ -77,7 +77,7 @@ class _GetStartedState extends State<GetStarted> {
             primary: const Color.fromRGBO(226,18 , 33, 1.0)
           ),
           onPressed: () {
-            Navigator.pushNamed(context, '/signup');
+            Navigator.pushNamed(context, '/continue');
           },
           child: const Text(
             'Get Started',

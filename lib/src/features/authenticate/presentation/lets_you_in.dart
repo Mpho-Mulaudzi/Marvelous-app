@@ -1,14 +1,14 @@
 import "package:flutter/material.dart";
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({Key? key}) : super(key: key);
+class LetsYouIn extends StatefulWidget {
+  const LetsYouIn({Key? key}) : super(key: key);
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<LetsYouIn> createState() => _LetsYouInState();
 }
 
-class _SignupState extends State<Signup> {
+class _LetsYouInState extends State<LetsYouIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,7 +97,7 @@ class _SignupState extends State<Signup> {
             const Text("Don't have an account? "),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/create');
+                Navigator.pushNamed(context, '/signup');
               },
               child: const Text(
                 "Sign up",

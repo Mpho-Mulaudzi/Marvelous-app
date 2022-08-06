@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-class createAccountpage extends StatefulWidget {
-  const createAccountpage({Key? key}) : super(key: key);
+class SignUp extends StatefulWidget {
+  const  SignUp ({Key? key}) : super(key: key);
 
   @override
-  State<createAccountpage> createState() => _createAccountpageState();
+  State< SignUp > createState() => _SignUpState();
 }
 
-class _createAccountpageState extends State<createAccountpage> {
+class _SignUpState  extends State<SignUp> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool _isObscure = true;
 
