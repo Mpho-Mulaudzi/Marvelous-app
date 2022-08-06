@@ -14,7 +14,7 @@ class _LetsYouInState extends State<LetsYouIn> {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.fromLTRB(5, 10, 5, 10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -75,7 +75,7 @@ class _LetsYouInState extends State<LetsYouIn> {
         ),
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.fromLTRB(60, 0, 60, 25),
+        padding: const EdgeInsets.fromLTRB(60, 8, 60, 8),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               shape: const StadiumBorder(),

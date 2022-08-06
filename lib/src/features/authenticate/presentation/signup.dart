@@ -24,10 +24,10 @@ class _SignUpState  extends State<SignUp> {
               Image.asset(
                 'assets/logo.png',
                 height: 100,
-                width: 200,
+                width: 150,
               ),
               const SizedBox(
-                height: 20,
+                height: 15,
               ),
               const Text(
                 "Create Your Account",
@@ -39,7 +39,7 @@ class _SignUpState  extends State<SignUp> {
                     letterSpacing: 2.0),
               ),
               const SizedBox(
-                height: 10,
+                height: 15,
               ),
               Form(
                 key: _formKey,
@@ -62,7 +62,7 @@ class _SignUpState  extends State<SignUp> {
                       },
                     ),
                     const SizedBox(
-                      height: 3,
+                      height: 8,
                     ),
                     TextFormField(
                       obscureText: _isObscure,
@@ -89,33 +89,30 @@ class _SignUpState  extends State<SignUp> {
                       },
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 15,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(60, 0, 60, 0),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            shape: const StadiumBorder(),
-                            elevation: 0.0,
-                            primary: const Color.fromRGBO(226, 18, 33, 1.0)),
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/login');
-                        },
-                        child: const Text(
-                          'Sign up',
-                          style: TextStyle(fontSize: 14, color: Colors.white),
-                        ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: const StadiumBorder(),
+                          elevation: 0.0,
+                          primary: const Color.fromRGBO(226, 18, 33, 1.0)),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
+                      child: const Text(
+                        'Sign up',
+                        style: TextStyle(fontSize: 14, color: Colors.white),
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 8,
                     ),
                     const Center(
                       child: Text('Or continue with',
                           style: TextStyle(fontSize: 16, color: Colors.blueGrey)),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 25,
                     ),
                     Row(
                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -155,7 +152,7 @@ class _SignUpState  extends State<SignUp> {
         ),
       ),
         bottomNavigationBar: Padding(
-          padding: const EdgeInsets.fromLTRB(60, 0, 60, 10),
+          padding: const EdgeInsets.fromLTRB(60, 0, 60, 13),
           child: Row(
             children: [
               const Text("Already have an account?"),
