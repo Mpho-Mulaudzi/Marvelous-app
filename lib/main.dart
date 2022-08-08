@@ -1,4 +1,8 @@
+
+
 import 'package:flutter/material.dart';
+import 'package:marvelous/src/features/passcode/fingerprint.dart';
+import 'package:marvelous/src/features/passcode/password.dart';
 import 'package:marvelous/src/pages/loading_screen.dart';
 import 'package:marvelous/src/features/start/presentation/getstarted.dart';
 import 'package:marvelous/src/pages/profile.dart';
@@ -6,7 +10,7 @@ import 'package:marvelous/src/features/authenticate/presentation/lets_you_in.dar
 import 'package:marvelous/src/features/authenticate/presentation/signup.dart';
 import 'package:marvelous/src/features/authenticate/presentation/signin.dart';
 import 'package:marvelous/src/features/selection/presentation/choose_interest.dart';
-import 'package:marvelous/src/pages/profile.dart';
+
 void main() => runApp(MaterialApp(
 
   initialRoute: '/',
@@ -17,7 +21,9 @@ void main() => runApp(MaterialApp(
     '/signup' : (context) => const SignUp(),
     '/login' : (context) => const SignIn(),
     '/interests' :(context) => const chooseInterestpage(),
-    '/profile' : (context) => const profilepage()
+    '/profile' : (context) => const profilepage(),
+    '/pin': (context)=> const Password(),
+    '/biometric': (context) => const FingerPrint()
   },
 
 ));
