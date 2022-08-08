@@ -143,7 +143,7 @@ class profilepage extends StatelessWidget {
                     elevation: 0.0,
                     primary: const Color.fromRGBO(255, 200, 200, 1.0)),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/profile');
+                  Navigator.pushNamed(context, '/pin');
                 },
                 child: const Text(
                   'Skip',
@@ -160,7 +160,7 @@ class profilepage extends StatelessWidget {
                     elevation: 0.0,
                     primary: const Color.fromRGBO(226, 18, 33, 1.0)),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/profile');
+                  Navigator.pushNamed(context, '/pin');
                 },
                 child: const Text(
                   'Continue',
