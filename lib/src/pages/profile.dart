@@ -7,6 +7,7 @@ class profilepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+              resizeToAvoidBottomInset: false,
               appBar: AppBar(
                 title: const Text('Fill Your Profile', style: TextStyle(
                   color: Colors.black,
@@ -20,9 +21,9 @@ class profilepage extends StatelessWidget {
                   preferredSize: Size.fromHeight(100.0),
                   child: Stack(
                     children:[ const CircleAvatar(
-                       backgroundImage: AssetImage('assets/icon/icon.png'),
+                       backgroundImage: AssetImage('assets/Upload_image.png'),
                       backgroundColor: Colors.white70,
-                      radius:50,
+                      radius:55,
                     ),
                      Positioned(
                        bottom : 0,

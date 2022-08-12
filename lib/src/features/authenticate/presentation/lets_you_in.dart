@@ -25,7 +25,7 @@ class _LetsYouInState extends State<LetsYouIn> {
                   height: 200,
                   width:200,
                   image: AssetImage(
-                  'assets/letsyouin.jpg',
+                  'assets/Welcome.png',
 
                 ),
               ),
@@ -82,7 +82,7 @@ class _LetsYouInState extends State<LetsYouIn> {
               elevation: 0.0,
               primary: const Color.fromRGBO(226, 18, 33, 1.0)),
           onPressed: () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/login');
           },
           child: const Text(
             'Sign in with password',

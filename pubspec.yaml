@@ -35,6 +35,8 @@ dependencies:
   flutter_signin_button: ^2.0.0
   flutter_svg: ^1.1.2
   flutter_pin_code_fields: ^1.1.0
+  firebase_auth: ^3.6.3
+  cloud_firestore: ^3.4.4
 
 dev_dependencies:
   flutter_test:
@@ -70,21 +72,24 @@ flutter:
    - assets/ST.jpg
    - assets/ST_Logo.jpg
    - assets/Will.jpg
-   - assets/cat.gif
-   - assets/girl.png
-   - assets/signup.gif
-   - assets/login.gif
-   - assets/forgotpassword.gif
-   - assets/create.gif
-   - assets/pc.jpg
    - assets/fire.jpg
    - assets/icon/Apple.png
    - assets/icon/facebook.png
    - assets/icon/google.png
    - assets/icon/icon.png
-   - assets/letsyouin.jpg
    - assets/icon/fingerprint.png
-
+   - assets/Authentication.png
+   - assets/Buddies.png
+   - assets/Exams.png
+   - assets/Fingerprint.png
+   - assets/Forgot_password.png
+   - assets/Login.png
+   - assets/secure_login.png
+   - assets/My_password.png
+   - assets/Welcome.png
+   - assets/Welcoming.png
+   - assets/To_the_moon.png
+   - assets/Upload_image.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

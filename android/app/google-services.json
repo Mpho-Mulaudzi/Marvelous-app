@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "829729872523",
+    "project_id": "marvelous-app-5cc61",
+    "storage_bucket": "marvelous-app-5cc61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829729872523:android:dc7dd62e8f9cf623c5d28e",
+        "android_client_info": {
+          "package_name": "com.app.marvelous"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829729872523-qc5s656kduoaj7g2mapfh9ti9ohi86k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUOzDxDxpiCvwdPqyOGBHQ5xxqmHnUZ5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829729872523-qc5s656kduoaj7g2mapfh9ti9ohi86k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
