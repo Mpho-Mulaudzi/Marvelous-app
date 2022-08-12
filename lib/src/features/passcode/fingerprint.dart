@@ -20,10 +20,10 @@ class _FingerPrintState extends State<FingerPrint> {
         elevation: 0.0,
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 30, 20, 30),
+        padding: const EdgeInsets.fromLTRB(20, 50, 20, 50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children:<Widget>[
+          children:const <Widget>[
             Text(
               'Add a finger prints to make a your account more secure',
               textAlign: TextAlign.center,
@@ -33,7 +33,11 @@ class _FingerPrintState extends State<FingerPrint> {
             ),
              Center(
                child: Image(
-                 image: AssetImage('assets/icon/fingerprint.png'))
+                 image: AssetImage('assets/Fingerprint.png'),
+                 height: 249,
+                 ),
+
+
              ),
 
              SizedBox(

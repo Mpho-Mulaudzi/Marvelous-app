@@ -26,9 +26,9 @@ class _chooseInterestpageState extends State<chooseInterestpage> {
         elevation: 0.0,
         //remove shadow
         bottom: const PreferredSize(
-            preferredSize: Size.fromHeight(40.0),
+            preferredSize: Size.fromHeight(80.0),
             child: Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(15.0),
               child: Text(
                   'Choose your interests, and get the best movie recommendations. Dont worry you can always change later',
                   style: TextStyle(color: Colors.black),
