@@ -14,16 +14,16 @@ class _LetsYouInState extends State<LetsYouIn> {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(5, 10, 5, 10),
+          padding: const EdgeInsets.fromLTRB(25, 120, 25, 120),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               ClipRRect(
-                borderRadius: BorderRadius.circular(50),
+                borderRadius: BorderRadius.circular(70),
                 child: const Image(
-                  height: 200,
-                  width:200,
+                  height: 250,
+                  width:250,
                   image: AssetImage(
                   'assets/Welcome.png',
 
@@ -40,7 +40,7 @@ class _LetsYouInState extends State<LetsYouIn> {
                     letterSpacing: 2.0),
               ),
               const SizedBox(
-                height: 15,
+                height: 20,
               ),
               SignInButton(
                 Buttons.FacebookNew ,
@@ -49,7 +49,7 @@ class _LetsYouInState extends State<LetsYouIn> {
                 elevation: 0.0,
               ),
               const SizedBox(
-                height: 3,
+                height: 20,
               ),
               SignInButton(
                 Buttons.Google,
@@ -59,7 +59,7 @@ class _LetsYouInState extends State<LetsYouIn> {
 
               ),
               const SizedBox(
-                height: 3,
+                height: 20,
               ),
               SignInButton(
                 Buttons.Apple,
@@ -68,6 +68,9 @@ class _LetsYouInState extends State<LetsYouIn> {
                 elevation: 0.0,
 
               ),
+              const SizedBox(
+                height: 45,
+              ),
               const Text('Or',
                   style: TextStyle(fontSize: 16, color: Colors.blueGrey)),
             ],
@@ -75,7 +78,7 @@ class _LetsYouInState extends State<LetsYouIn> {
         ),
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.fromLTRB(60, 8, 60, 8),
+        padding: const EdgeInsets.fromLTRB(100, 8, 100, 20),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               shape: const StadiumBorder(),
@@ -91,7 +94,7 @@ class _LetsYouInState extends State<LetsYouIn> {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(60, 0, 60, 20),
+        padding: const EdgeInsets.fromLTRB(100, 0, 100, 20),
         child: Row(
           children: [
             const Text("Don't have an account? "),

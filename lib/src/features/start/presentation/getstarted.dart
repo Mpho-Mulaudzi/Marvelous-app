@@ -40,7 +40,7 @@ class _GetStartedState extends State<GetStarted> {
       floatingActionButton: Column(
         children: const <Widget>[
           Padding(
-              padding: EdgeInsets.fromLTRB(5, 435, 5, 0),
+              padding: EdgeInsets.fromLTRB(45, 600, 45, 0),
               child: Text(
                 'Welcome to Marvelous',
                 textAlign: TextAlign.center,
@@ -69,7 +69,7 @@ class _GetStartedState extends State<GetStarted> {
       ),
 
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(25, 0, 25,5),
+        padding: const EdgeInsets.fromLTRB(45, 0, 45,5),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),

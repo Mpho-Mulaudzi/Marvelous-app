@@ -19,17 +19,22 @@ class _SignUpState  extends State<SignUp> {
         physics: NeverScrollableScrollPhysics(),
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 50, 10, 50),
+            padding: const EdgeInsets.fromLTRB(30, 50, 30, 50),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Image.asset(
-                  'assets/Buddies.png',
-                  height: 120,
-                  width: 200,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(65),
+                  child: const Image(
+                    image: AssetImage(
+                    'assets/Buddies.png',
+                  ),
+                    height: 380,
+                    width: 380,
+                )
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 2,
                 ),
                 const Text(
                   "Create Your Account",
@@ -64,7 +69,7 @@ class _SignUpState  extends State<SignUp> {
                         },
                       ),
                       const SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       TextFormField(
                         obscureText: _isObscure,
@@ -99,7 +104,7 @@ class _SignUpState  extends State<SignUp> {
                             elevation: 0.0,
                             primary: const Color.fromRGBO(226, 18, 33, 1.0)),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/login');
+                          Navigator.pushNamed(context, '/interests');
                         },
                         child: const Text(
                           'Sign up',
@@ -107,14 +112,14 @@ class _SignUpState  extends State<SignUp> {
                         ),
                       ),
                       const SizedBox(
-                        height: 8,
+                        height: 35,
                       ),
                       const Center(
                         child: Text('Or continue with',
                             style: TextStyle(fontSize: 16, color: Colors.blueGrey)),
                       ),
                       const SizedBox(
-                        height: 25,
+                        height: 35,
                       ),
                       Row(
                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -155,7 +160,7 @@ class _SignUpState  extends State<SignUp> {
         ),
       ),
         bottomNavigationBar: Padding(
-          padding: const EdgeInsets.fromLTRB(60, 0, 60, 10),
+          padding: const EdgeInsets.fromLTRB(80, 0, 80, 15),
           child: Row(
             children: [
               const Text("Already have an account?"),
@@ -164,7 +169,7 @@ class _SignUpState  extends State<SignUp> {
                   Navigator.pushNamed(context, '/login');
                 },
                 child: const Text(
-                  "Signin",
+                  " Sign in",
                   style: TextStyle(color: Color.fromRGBO(226, 18, 33, 1.0)),
                 ),
               ),
