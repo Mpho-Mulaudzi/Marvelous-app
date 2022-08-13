@@ -28,7 +28,7 @@ class _chooseInterestpageState extends State<chooseInterestpage> {
         bottom: const PreferredSize(
             preferredSize: Size.fromHeight(80.0),
             child: Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.fromLTRB(35, 15, 35, 15),
               child: Text(
                   'Choose your interests, and get the best movie recommendations. Dont worry you can always change later',
                   style: TextStyle(color: Colors.black),
@@ -38,7 +38,7 @@ class _chooseInterestpageState extends State<chooseInterestpage> {
       body: Wrap(
         alignment: WrapAlignment.spaceEvenly,
         direction: Axis.horizontal,
-        spacing: 15.0,
+        spacing: 40.0,
         children: genres.map((genre) {
           return ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -54,6 +54,11 @@ class _chooseInterestpageState extends State<chooseInterestpage> {
             ),
           );
         }).toList(),
+        
+      ),
+      floatingActionButton: Image(
+         image: AssetImage('assets/Checking_boxes.png')
+         ,
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.fromLTRB(40, 20, 40, 20),

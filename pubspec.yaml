@@ -37,6 +37,7 @@ dependencies:
   flutter_pin_code_fields: ^1.1.0
   firebase_auth: ^3.6.3
   cloud_firestore: ^3.4.4
+  firebase_core: ^1.20.1
 
 dev_dependencies:
   flutter_test:
@@ -90,7 +91,7 @@ flutter:
    - assets/Welcoming.png
    - assets/To_the_moon.png
    - assets/Upload_image.png
-
+   - assets/Checking_boxes.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class FingerPrint extends StatefulWidget {
   const FingerPrint({Key? key}) : super(key: key);
 
@@ -20,39 +21,81 @@ class _FingerPrintState extends State<FingerPrint> {
         elevation: 0.0,
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 50, 20, 50),
+        padding: const EdgeInsets.fromLTRB(20, 100, 20, 100),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children:const <Widget>[
-            Text(
+          children: <Widget>[
+            const Text(
               'Add a finger prints to make a your account more secure',
               textAlign: TextAlign.center,
             ),
-            SizedBox(
-              height: 30.0,
+            const SizedBox(
+              height: 80.0,
             ),
-             Center(
-               child: Image(
-                 image: AssetImage('assets/Fingerprint.png'),
-                 height: 249,
-                 ),
-
-
-             ),
-
-             SizedBox(
-              height: 10,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/login');
+              },
+              child: Center(
+                child :ClipRRect(
+                  borderRadius: BorderRadius.circular(35),
+                  child: const Image(
+                    image: AssetImage('assets/Fingerprint.png'),
+                    height: 209,
+                  ),
+                ),
+              ),
             ),
-            Text(
+            const SizedBox(
+              height: 80,
+            ),
+            const Text(
               'Please put your finger on the finger prints scanner to get started',
               textAlign: TextAlign.center,
             ),
           ],
         ),
-      )
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.fromLTRB(30, 0, 30, 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    shape: const StadiumBorder(),
+                    elevation: 0.0,
+                    primary: const Color.fromRGBO(255, 200, 200, 1.0)),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                child: const Text(
+                  'Skip',
+                  style: TextStyle(
+                      fontSize: 12, color: Color.fromRGBO(226, 18, 33, 1.0)),
+                ),
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    shape: const StadiumBorder(),
+                    elevation: 0.0,
+                    primary: const Color.fromRGBO(226, 18, 33, 1.0)),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                child: const Text(
+                  'Continue',
+                  style: TextStyle(fontSize: 12, color: Colors.white),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
     );
-
-
-
   }
 }

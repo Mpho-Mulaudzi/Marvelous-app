@@ -9,25 +9,27 @@ class profilepage extends StatelessWidget {
     return Scaffold(
               resizeToAvoidBottomInset: false,
               appBar: AppBar(
-                title: const Text('Fill Your Profile', style: TextStyle(
+                title: const Text('Fill Your Profile',
+                  style: TextStyle(
                   color: Colors.black,
                   letterSpacing: 3.0,
                 ),
-                  textAlign: TextAlign.start,),
+                  textAlign: TextAlign.center),
                 centerTitle: false,
                 backgroundColor: const Color.fromRGBO(255, 250, 250, 1.0),
                 elevation: 0.0,
                 bottom:  PreferredSize(
-                  preferredSize: Size.fromHeight(100.0),
+                  preferredSize: Size.fromHeight(180.0),
                   child: Stack(
-                    children:[ const CircleAvatar(
+                    children:[
+                      const CircleAvatar(
                        backgroundImage: AssetImage('assets/Upload_image.png'),
                       backgroundColor: Colors.white70,
-                      radius:55,
+                      radius:100,
                     ),
                      Positioned(
                        bottom : 0,
-                       left : 60,
+                       left : 90,
                        child: IconButton(onPressed: (){},
                            icon: Icon(
                              color: Colors.red[800],
@@ -41,7 +43,7 @@ class profilepage extends StatelessWidget {
 
               ),
             body: Padding(
-              padding: const EdgeInsets.fromLTRB(25, 15, 25, 15),
+              padding: const EdgeInsets.fromLTRB(25, 85, 35, 55),
               child: Column(
                 children: [
                   TextFormField(
@@ -59,7 +61,7 @@ class profilepage extends StatelessWidget {
                     },
                   ),
                   const SizedBox(
-                    height: 3,
+                    height: 15,
                   ),
                   TextFormField(
                     style : const TextStyle( fontSize: 15),
@@ -76,7 +78,7 @@ class profilepage extends StatelessWidget {
                     },
                   ),
                   const SizedBox(
-                    height: 3,
+                    height: 15,
                   ),
                   TextFormField(
                     style : const TextStyle( fontSize: 15),
@@ -93,7 +95,7 @@ class profilepage extends StatelessWidget {
                     },
                   ),
                   const SizedBox(
-                    height: 3,
+                    height: 10,
                   ),
                   TextFormField(
                     style : const TextStyle( fontSize: 15),
@@ -110,7 +112,7 @@ class profilepage extends StatelessWidget {
                     },
                   ),
                   const SizedBox(
-                    height: 3,
+                    height: 15,
                   ),
                   TextFormField(
                     style : const TextStyle( fontSize: 15),
@@ -133,7 +135,7 @@ class profilepage extends StatelessWidget {
             ),
 
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+        padding: const EdgeInsets.fromLTRB(30, 0, 30, 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

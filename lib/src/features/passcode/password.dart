@@ -24,7 +24,7 @@ class _PasswordState extends State<Password> {
       body: SingleChildScrollView(
         physics: NeverScrollableScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 30, 20, 30),
+          padding: const EdgeInsets.fromLTRB(20, 60, 20, 60),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -75,11 +75,14 @@ class _PasswordState extends State<Password> {
                     style: TextStyle(fontSize: 14, color: Colors.white, wordSpacing: 10.0 ),
                   ),
                 ),
+              const SizedBox(
+                height: 30.0,
+              ),
               Center(
                   child: Image(
                       image: AssetImage('assets/My_password.png'),
-                      width: 200,
-                      height: 200,
+                      width: 400,
+                      height: 400,
                   )
               ),
 
