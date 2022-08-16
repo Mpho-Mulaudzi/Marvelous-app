@@ -1,21 +1,45 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
-class AuthService {
-
-  //methods to interact with firebase for us
-
-   final FirebaseAuth _auth = FirebaseAuth.instance;
-   final String _email = '';
-   final String _password = '';
-   //email sign in
-
-   Future signInEmail() async {
-
-}
-
-  //email register
-
-  //sign out
 
 
+class Auth {
+  static Future<String?> mailRegister(String mail, String pwd) async {
+    try {
+      await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(email: mail, password: pwd);
+      return null;
+    } on FirebaseAuthException catch (ex) {
+      return "${ex.code}: ${ex.message}";
+    }
+  }
+
+  static Future<String?> signOut() async {
+    try {
+      await FirebaseAuth.instance.signOut();
+      return null;
+    } on FirebaseAuthException catch (ex) {
+      return "${ex.code}: ${ex.message}";
+    }
+  }
+
+  static Future<String?> mailSignIn(String mail, String pwd) async {
+    try {
+      await FirebaseAuth.instance
+          .signInWithEmailAndPassword(email: mail, password: pwd);
+      return null;
+    } on FirebaseAuthException catch (ex) {
+      return "${ex.code}: ${ex.message}";
+    }
+  }
+
+  static Future<String?> googleSignIn() async {
+    try {
+      await FirebaseAuth.instance.signInWithPopup(GoogleAuthProvider());
+      return null;
+    } on FirebaseAuthException catch (ex) {
+      return "${ex.code}: ${ex.message}";
+    } on UnimplementedError catch (ex) {
+      return ex.message;
+    }
+  }
 }
