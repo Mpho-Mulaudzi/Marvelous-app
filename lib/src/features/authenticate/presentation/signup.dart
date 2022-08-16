@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:marvelous/src/services/auth.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class SignUp extends StatefulWidget {
@@ -9,9 +11,12 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState  extends State<SignUp> {
+  String _pwd = "";
+  String _mail = "";
+  User? _user;
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool _isObscure = true;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,24 +59,23 @@ class _SignUpState  extends State<SignUp> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      TextFormField(
+                      TextField(
                         style : const TextStyle( fontSize: 12),
                         decoration: const InputDecoration(
                             border: InputBorder.none,
                             contentPadding: EdgeInsets.symmetric(vertical: 17),
                             hintText: 'Email',
                         prefixIcon: Icon(Icons.email,size: 20)),
-                        validator: (String? value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter email';
-                          }
-                          return null;
+                        onChanged: (value) {
+                          setState(() {
+                            _mail = value;
+                          });
                         },
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-                      TextFormField(
+                      TextField(
                         obscureText: _isObscure,
                         style : const TextStyle( fontSize: 12 ),
                         decoration: InputDecoration(
@@ -88,11 +92,10 @@ class _SignUpState  extends State<SignUp> {
                                     _isObscure = !_isObscure;
                                   });
                                 })),
-                        validator: (String? value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter email';
-                          }
-                          return null;
+                        onChanged: (value) {
+                          setState(() {
+                            _pwd = value;
+                          });
                         },
                       ),
                       const SizedBox(
@@ -103,9 +106,13 @@ class _SignUpState  extends State<SignUp> {
                             shape: const StadiumBorder(),
                             elevation: 0.0,
                             primary: const Color.fromRGBO(226, 18, 33, 1.0)),
-                        onPressed: () {
+                        onPressed: ()  {
+
                           Navigator.pushNamed(context, '/interests');
-                        },
+
+                         },
+
+
                         child: const Text(
                           'Sign up',
                           style: TextStyle(fontSize: 14, color: Colors.white),
