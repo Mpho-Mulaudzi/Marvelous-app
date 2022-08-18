@@ -7,18 +7,19 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         bottom: PreferredSize(
         preferredSize: Size.fromHeight(300.0),
             child: Padding(
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.all(45.0),
               child: Column(
 
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                    Text('Strange Things'
-                   , style: TextStyle( fontSize: 26, color: Colors.white,fontWeight:FontWeight.bold)),
+                   , style: TextStyle( fontSize: 22, color: Colors.white,fontWeight:FontWeight.bold)),
                    SizedBox(height:5),
-                   Text('Action, Superhero, Mystery, Thriller...', style: TextStyle( fontSize: 12, color: Colors.white)),
+                   Text('Action, Superhero, Mystery, Thriller...', style: TextStyle( fontSize: 10, color: Colors.white)),
                   Row(
                     children: <Widget>[
                       ElevatedButton.icon(
@@ -70,13 +71,20 @@ class Home extends StatelessWidget {
             )
 
         ),
-        flexibleSpace:Image(
-          height: 450,
-          image: AssetImage(
-            'assets/eleven.png'
-          ),
-          fit: BoxFit.cover,
+        flexibleSpace:Padding(
+          padding: const EdgeInsets.fromLTRB(17, 35, 17, 35),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(15),
+            child: Image(
+              height: 420,
+              width: 450,
+              image: AssetImage(
+                'assets/eleven.png'
+              ),
+              fit: BoxFit.cover,
 
+            ),
+          ),
         ),
         title: Image(
           image: AssetImage(
@@ -87,14 +95,20 @@ class Home extends StatelessWidget {
         ),
         actions: [
           // Navigate to the Search Screen
-          IconButton(
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+            child: IconButton(
+                onPressed: () => {},
+             icon: const Icon(Icons.search),
+             color: Colors.red,),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 8, 8, 8),
+            child: IconButton(
               onPressed: () => {},
-           icon: const Icon(Icons.search),
-           color: Colors.red,),
-          IconButton(
-            onPressed: () => {},
-            icon: const Icon(Icons.notifications),
-            color: Colors.red,)
+              icon: const Icon(Icons.notifications),
+              color: Colors.red,),
+          )
 
 
         ],
@@ -108,48 +122,66 @@ class Home extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 60, 00, 60),
+        padding: const EdgeInsets.fromLTRB(13, 60, 13, 60),
         child: Container(
           height: 200,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               Container(
-
-
-
                 child:ClipRRect(
-                  borderRadius: BorderRadius.circular(35),
+                  borderRadius: BorderRadius.circular(10),
                   child: Image(
-
                     image: AssetImage(
                       'assets/4.png'
                     ),
                   ),
                 )
-
               ),
               SizedBox( width: 4),
               Container(
 
-
-
                 child:  ClipRRect(
-                  borderRadius: BorderRadius.circular(35),
+                  borderRadius: BorderRadius.circular(10),
                   child: Image(
                     image: AssetImage(
-                        'assets/1.jpg'
+                        'assets/6.jpg'
                     ),
                   ),
                 )
               ),
               SizedBox( width: 4),
               Container(
+                  child:  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image(
+                      image: AssetImage(
+                          'assets/7.jpg'
+                      ),
+                    ),
+                  )
+              ),
+              SizedBox( width: 4),
+              Container(
+
+
+
+                  child:  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image(
+                      image: AssetImage(
+                          'assets/1.jpg'
+                      ),
+                    ),
+                  )
+              ),
+              SizedBox( width: 4),
+              Container(
 
 
 
                 child:  ClipRRect(
-                  borderRadius: BorderRadius.circular(35),
+                  borderRadius: BorderRadius.circular(10),
                   child: Image(
                     image: AssetImage(
                         'assets/3.jpg'
@@ -160,7 +192,7 @@ class Home extends StatelessWidget {
               SizedBox( width: 4),
               Container(
                 child:  ClipRRect(
-                  borderRadius: BorderRadius.circular(35),
+                  borderRadius: BorderRadius.circular(10),
                   child: Image(
                     image: AssetImage(
                         'assets/5.jpg'
@@ -171,7 +203,7 @@ class Home extends StatelessWidget {
               SizedBox( width: 4),
               Container(
                   child:  ClipRRect(
-                    borderRadius: BorderRadius.circular(35),
+                    borderRadius: BorderRadius.circular(10),
                     child: Image(
                       image: AssetImage(
                           'assets/4.jpg'
