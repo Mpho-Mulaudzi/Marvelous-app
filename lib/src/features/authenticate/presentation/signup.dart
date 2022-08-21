@@ -21,10 +21,11 @@ class _SignUpState  extends State<SignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
+        scrollDirection: Axis.vertical,
+        physics: ClampingScrollPhysics(),
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(30, 50, 30, 50),
+            padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -38,9 +39,7 @@ class _SignUpState  extends State<SignUp> {
                     width: 380,
                 )
                 ),
-                const SizedBox(
-                  height: 2,
-                ),
+
                 const Text(
                   "Create Your Account",
                   style: TextStyle(
@@ -51,7 +50,7 @@ class _SignUpState  extends State<SignUp> {
                       letterSpacing: 2.0),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Form(
                   key: _formKey,
@@ -73,7 +72,7 @@ class _SignUpState  extends State<SignUp> {
                         },
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 30,
                       ),
                       TextField(
                         obscureText: _isObscure,
@@ -99,7 +98,7 @@ class _SignUpState  extends State<SignUp> {
                         },
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 30,
                       ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(

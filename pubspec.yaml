@@ -73,7 +73,6 @@ flutter:
    - assets/ST.jpg
    - assets/ST_Logo.jpg
    - assets/Will.jpg
-   - assets/fire.jpg
    - assets/icon/Apple.png
    - assets/icon/facebook.png
    - assets/icon/google.png
@@ -101,7 +100,14 @@ flutter:
    - assets/5.jpg
    - assets/6.jpg
    - assets/7.jpg
-   - assets/8.jpg
+   - assets/9.jpg
+   - assets/10.jpg
+   - assets/11.jpg
+   - assets/image1.jpg
+   - assets/image2.jpg
+   - assets/image3.jpg
+
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
