@@ -1,6 +1,6 @@
 # marvelous
 
-A new Flutter project.
+A new Flutter project mobile app for streaming movies.
 
 ## Getting Started
 
